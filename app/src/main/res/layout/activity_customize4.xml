@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color1">
+
+    <!-- Header -->
+    <include layout="@layout/header" />
+
+    <!-- Main Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Lists Container -->
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="222dp"
+            android:layout_height="234dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/black_border"
+            android:scaleType="centerCrop"
+            android:src="@drawable/place_holder" />
+
+
+        <!-- Flower Container -->
+        <RelativeLayout
+            android:id="@+id/flower_container"
+            android:layout_width="222dp"
+            android:layout_height="234dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/black_border"
+            android:scaleType="centerCrop">
+
+            <RelativeLayout
+                android:id="@+id/tie_container"
+                android:layout_width="196dp"
+                android:layout_height="190dp"
+                android:layout_marginLeft="10dp"
+
+                android:scaleType="centerCrop"></RelativeLayout>
+        </RelativeLayout>
+        <!-- tie Container -->
+
+
+        <LinearLayout
+            android:id="@+id/lists_container"
+            android:layout_width="80dp"
+            android:layout_height="280dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="150dp">
+
+            <!-- Flower List -->
+            <LinearLayout
+                android:id="@+id/flower_list"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/strawberrystepcake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/strawberrystepcake"
+                    android:background="@drawable/strawberrystepcake"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="strawberrystepcake" />
+
+                <ImageView
+                    android:id="@+id/chocolatestepcake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/chocolatestepcake"
+                    android:background="@drawable/chocolatestepcake"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="chocolatestepcake" />
+
+                <ImageView
+                    android:id="@+id/lovestepcake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/lovestepcake"
+                    android:background="@drawable/lovestepcake"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="lovestepcake" />
+            </LinearLayout>
+
+            <!-- Tie List -->
+            <LinearLayout
+                android:id="@+id/tie_list"
+                android:layout_width="80dp"
+                android:layout_height="280dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp">
+
+                <ImageView
+                    android:id="@+id/flowercandle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/flowercandle"
+                    android:background="@drawable/black_border"
+                    android:contentDescription="flowercandle" />
+
+                <ImageView
+                    android:id="@+id/onecandle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/onecandle"
+                    android:background="@drawable/onecandle"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="onecandle" />
+
+                <ImageView
+                    android:id="@+id/logocandle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:src="@drawable/logocandle"
+                    android:background="@drawable/logocandle"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="logocandle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Total Amount -->
+        <TextView
+            android:id="@+id/total_amount"
+            android:layout_width="331dp"
+            android:layout_height="173dp"
+            android:layout_below="@id/lists_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-22dp"
+            android:visibility="gone"/>
+        <!-- Total Amount -->
+        <TextView
+            android:id="@+id/final_amount"
+            android:layout_width="331dp"
+            android:layout_height="173dp"
+            android:layout_below="@id/lists_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-22dp"
+            android:visibility="gone"/>
+
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/flowers_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total_amount"
+            android:text="Flavour"
+            android:onClick="onClickFlowers" />
+
+        <Button
+            android:id="@+id/ties_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flowers_button"
+            android:text="candles"
+            android:onClick="onClickTies" />
+
+        <Button
+            android:id="@+id/complete_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ties_button"
+            android:text="Complete"
+
+            android:onClick="onClickComplete" />
+
+        <Button
+            android:id="@+id/finish_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Finish"
+            android:onClick="onClickFinish"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/placeorder_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Place Order"
+            android:onClick="onClickPlaceorder"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

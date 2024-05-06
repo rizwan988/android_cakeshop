@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "496326277258",
+    "project_id": "cake-heaven-58426",
+    "storage_bucket": "cake-heaven-58426.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496326277258:android:bb2fcd3704125e68da9573",
+        "android_client_info": {
+          "package_name": "com.example.bshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3PqrfhPGJHIONMd8mMIYsP5hfSlUKPAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
